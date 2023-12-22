@@ -8,8 +8,8 @@ pipeline {
                         sh 'docker build -t 191201233/test_python .'
                         sh 'docker push 191201233/test_python'
                     }
-            }
-    }
+                }
+        }
     //     stage("Deploy"){
     //         steps{
     //             echo 'Deploying and cleaning'
