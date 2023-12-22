@@ -10,14 +10,14 @@ pipeline {
                     }
             }
     }
-        stage("Deploy"){
-            steps{
-                echo 'Deploying and cleaning'
-                sh 'docker image pull 191201233/test_python'
-                sh 'docker container run -it 191201233/test_python'
+    //     stage("Deploy"){
+    //         steps{
+    //             echo 'Deploying and cleaning'
+    //             sh 'docker image pull 191201233/test_python'
+    //             sh 'docker container run -it 191201233/test_python'
 
-            }
-    }
+    //         }
+    // }
     }   
 
 }
