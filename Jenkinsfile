@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     stages {
-        stage {
+        stage("Docker build") {
             steps{
                 sh 'docker build -t 191201233/test_python .'
             }
