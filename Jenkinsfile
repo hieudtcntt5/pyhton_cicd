@@ -2,14 +2,19 @@ pipeline {
     agent any
 
     stages {
-        stage('Push docker hub'){
+        stage {
             steps{
-                withDockerRegistry(credentialsId: 'dockerhub', url: 'https://docker.io') {
-                        sh 'docker build -t 191201233/test_python .'
-                        sh 'docker push 191201233/test_python'
-                    }
-                }
+                sh 'docker build -t 191201233/test_python .'
+            }
         }
+        // stage('Push docker hub'){
+        //     steps{
+        //         withDockerRegistry(credentialsId: 'dockerhub', url: 'https://docker.io') {
+        //                 sh 'docker build -t 191201233/test_python .'
+        //                 sh 'docker push 191201233/test_python'
+        //             }
+        //         }
+        // }
     //     stage("Deploy"){
     //         steps{
     //             echo 'Deploying and cleaning'
