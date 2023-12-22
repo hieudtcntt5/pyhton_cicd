@@ -14,7 +14,6 @@ pipeline {
             steps{
                 echo 'Deploying and cleaning'
                 sh 'docker pull 191201233/test_python'
-                sh 'docker stop test_python|| echo "this container does not exist" '
                 sh 'docker run -it 191201233/test_python'
 
             }
