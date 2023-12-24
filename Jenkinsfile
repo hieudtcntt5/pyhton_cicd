@@ -4,7 +4,10 @@ pipeline {
     stages {
         stage("Docker build") {
             steps{
-                sh 'docker build -t 191201233/test_python .'
+                withDockerRegistry(credentialsId: 'dockerhub', url: 'https://index.docker.io/v1/'){
+                    sh 'docker build -t 191201233/test_python .'
+                }
+                
             }
         }
         // stage('Push docker hub'){
