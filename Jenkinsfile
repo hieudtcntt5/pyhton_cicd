@@ -5,7 +5,7 @@ pipeline {
         stage("Docker build") {
             steps{
                     echo 'docker building'
-                    sh 'docker build -t 191201233/test_python .'
+                    sh '/usr/bin/docker build -t 191201233/test_python .'
 
             }
         }
