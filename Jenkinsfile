@@ -4,9 +4,9 @@ pipeline {
     stages {
         stage("Docker build") {
             steps{
+                    echo 'docker building'
                     sh 'docker build -t 191201233/test_python .'
 
-                    
             }
         }
         // stage('Push docker hub'){
